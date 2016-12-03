@@ -1,7 +1,37 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <meta charset="utf-8" />
+    <title>My Friend Chiken</title>
+    <style> body { 
+    	margin: 0; 
+    	background: #333; 
+    	} </style>
+    <script src="js/phaser.min.js"></script>
+    
+    <script src="js/map.js"></script>
+    <script src="js/boot.js"></script>
+    <script src="js/preload.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/enemy.js"></script>
+    <script src="js/scoreboard.js"></script>
+
+
+
+
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<script>
+(function() {
+    var game = new Phaser.Game(640, 1136, Phaser.AUTO, '');
+    game.state.add('Boot', RPG.BootState);
+    game.state.add('Preloader', RPG.PreloadState);
+    game.state.add('Menu', RPG.MenuState);
+    game.state.add('Game', RPG.GameState);
+    game.state.start('Boot');
+})();
+</script>
 </body>
 </html>
