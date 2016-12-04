@@ -5,7 +5,7 @@
  function Player(game, x, y, player, gravity, speed){
 	console.log('in Player!');
 
-    this.keyboardMovement = true;
+    this.keyboardMovement = false;
     this.movespeed = speed;
 
 	Phaser.Sprite.call(this, game, x, y, player);
