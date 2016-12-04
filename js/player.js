@@ -22,7 +22,7 @@
 
     //add mouse/touch controls
 
-    //this.game.input.onDown.add(this.beginSwipe, this);
+    this.game.input.onDown.add(this.beginSwipe, this);
     this.mouse = this.game.input.mousePointer;
 
     this.previousvelocity = 0;
