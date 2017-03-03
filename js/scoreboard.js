@@ -13,10 +13,10 @@ function Scoreboard (game){
 	this.scoreboard.anchor.setTo(0.5,0.5);
 
 
-	this.scoreText = this.game.add.bitmapText (380, 180, 'flappyfont', '', 26 );
+	this.scoreText = this.game.add.bitmapText (320, 180, 'flappyfont', '', 26 );
 	this.add(this.scoreText);
 
-	this.bestScoreText = this.game.add.bitmapText (380, 230, 'flappyfont', '', 26);
+	this.bestScoreText = this.game.add.bitmapText (320, 230, 'flappyfont', '', 26);
 	this.add(this.bestScoreText);
 	
 
@@ -37,7 +37,7 @@ Scoreboard.prototype.constructor = Scoreboard;
 Scoreboard.prototype.show = function (score){
 	var medal,bestScore;
 	//setp 1
-	this.scoreText.setText(score.toString());
+	this.scoreText.setText("Jerry's The Best");
 	if(localStorage){
 		bestScore = localStorage.getItem('bestScore');
 		if(!bestScore || bestScore<score){
@@ -50,7 +50,7 @@ Scoreboard.prototype.show = function (score){
 		bestScore= 'N/A';
 	}
 
-	this.bestScoreText.setText(bestScore.toString());
+	this.bestScoreText.setText("You can't beat me !");
 /*
 	if(score >= 10 && score< 20){
 		medal = this.game.add.sprite (-65, 7, 'medals', 1);
